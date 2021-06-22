@@ -4,7 +4,9 @@
 <p>
     <%= f.id %>
     <%= f.title %>
+    <%= f.author %>
     <%= f.pages %>
+    <%= link_to('削除',"/books/delete/#{f.id}",method: :post) %>
     
 </p>
 <% end %>
