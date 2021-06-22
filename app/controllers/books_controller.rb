@@ -15,6 +15,14 @@ class BooksController < ApplicationController
     @book.delete
     redirect_to controller: :books, action: :index
   end
+  def edit
+    @book = Book.find_by(id: params[:id])
+  end
+  def update
+    @book = Book.find_by(id: params[:id])
+    @book.update(books_params)
+    redirect_to controller: :books, action: :index
+  end
 
   private
   def books_params

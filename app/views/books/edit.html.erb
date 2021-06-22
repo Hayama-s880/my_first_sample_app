@@ -1,0 +1,7 @@
+<h1>記事編集</h1>
+<%= form_with model: @book do |f| %>
+<%= f.text_field :title,:placeholder =>"#{@book.title}" %>
+<%= f.text_field :author,:placeholder =>"#{@book.author}" %>
+<%= f.number_field :pages,:placeholder =>"#{@book.pages}" %>
+<%= f.submit %>
+<% end %>
